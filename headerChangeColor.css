@@ -4,6 +4,7 @@
     --col3: white;
     --col4: black;
     --col5: transparent;
+    --col7: #00a2ff;
 }
 
 body {
@@ -15,24 +16,25 @@ body {
     font-family: sans-serif;
 }
 
+/*------------------------HEADER------------------------ */
+
 header {
     width: 100%;
-    height: 100vh;
-    background-image: url(https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=pexels-pixabay-326055.jpg&fm=jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 nav {
     position: fixed;
     width: 100%;
-    transition: ease-in-out .5s;
+    transition: ease-in-out 0.5s;
 }
 
 nav ul {
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     float: right;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 nav ul li {
@@ -47,6 +49,52 @@ nav ul li a {
     font-size: 20px;
 }
 
+.iconeMenuBurger {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 20px;
+    transition: linear 0.2s;
+    border: solid 1px var(--col2);
+}
+.iconeMenuBurger:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+
+.ligne1Burger {
+    width: 80%;
+    height: 10%;
+    margin-bottom: 4px;
+    transform-origin: left;
+    background-color: var(--col2);
+    transition: linear 0.1s;
+    border-radius: 50px;
+}
+.ligne2Burger {
+    width: 80%;
+    height: 10%;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    background-color: var(--col2);
+    border-radius: 50px;
+}
+.ligne3Burger {
+    width: 80%;
+    height: 10%;
+    margin-top: 4px;
+    transform-origin: left;
+    background-color: var(--col2);
+    transition: linear 0.1s;
+    border-radius: 50px;
+}
+
 .LogoTitre {
     display: flex;
     align-items: center;
@@ -54,6 +102,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--col3);
     font-size: 20px;
+    padding: 5px;
 }
 
 .logo {
@@ -63,6 +112,10 @@ nav ul li a {
     background-image: url(./img/Mon\ logo\ A&M-blanc-crème-rectangulaire-sans-txt.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+    transition: linear 0.3s;
+}
+.logo:hover {
+    background-image: url(./img/Mon\ logo\ A&M-noir-rectangulaire-sans-txt.jpg);
 }
 
 .text {
@@ -77,4 +130,232 @@ nav ul li a {
     background-color: var(--col4);
 }
 
+.btnRecherche {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--col5);
+    color: var(--col2);
+    border: none;
+    font-size: 25px;
+    padding: 20px;
+}
+.btnRecherche:hover {
+    cursor: pointer;
+}
+
+/*Gestion du voile recherche*/
+.navVoile {
+    opacity: 0;
+    z-index: -10;
+}
+.voileRechercheOn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--col4);
+    opacity: 1;
+    overflow: hidden;
+}
+
+.ligne1CroixVoileRecherche {
+    position: absolute;
+    top: 8px;
+    width: 80%;
+    height: 10%;
+    margin-bottom: 4px;
+    transform-origin: left;
+    border-radius: 50px;
+    transform-origin: left;
+    transform: translate(7px, 0px);
+    transform: rotate(45deg);
+}
+.ligne2CroixVoileRecherche {
+    position: absolute;
+    bottom: 6px;
+    width: 80%;
+    height: 10%;
+    margin-top: 4px;
+    transform-origin: left;
+    border-radius: 50px;
+    transform-origin: left;
+    transform: translate(7px, 0px);
+    transform: rotate(-45deg);
+}
+.ligne1CroixVoileRecherche, .ligne2CroixVoileRecherche {
+    background-color: var(--col3);
+}
+
+.labelRechercheOff {
+    display: none;
+}
+.labelRechercheOn {
+    display: flex;
+}
+
+.formRechercheOn {
+    margin-top: 45vh;
+    margin-left: 120px;
+    width: 80%;
+    background: var(--col4);
+    padding: 30px;
+    overflow: hidden;
+}
+.formRechercheOn .divInputRecherche {
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+.formRechercheOn .divInputRecherche input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 25px;
+    background: var(--col4);
+    color: var(--col2);
+    border-bottom: 2px solid var(--col2);
+    font-family: sans-serif;
+    outline: none;
+}
+.formRechercheOn .divInputRecherche label {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    color: var(--col2);
+    font-size: 25px;
+    font-family: sans-serif;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.divInputRecherche input:focus ~ label,
+.divInputRecherche input:valid ~ label {
+    transform: translateY(-30px);
+    color: var(--col7);
+    font-size: 15px;
+}
+.formRechercheOn .divInputRecherche .underline {
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 102%;
+}
+.divInputRecherche .underline:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--col7);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+.divInputRecherche input:focus ~ .underline:before,
+.divInputRecherche input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.formRechercheOff {
+    display: none;
+}
+
+.inputRechercheOff {
+    display: none;
+}
+
+/*Fin gestion voile recherche */
+
+@media screen and (min-width:1850px) {
+    .formRechercheOn {
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .formRechercheOn {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .formRechercheOn {
+        margin-left: 70px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .formRechercheOn {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .formRechercheOn {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .formRechercheOn {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .LogoTitre p {
+        display: none;
+    }
+    nav ul {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    nav {
+        height: 80px;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .iconeMenuBurger {
+        display: flex;
+        padding: 2px;
+        margin-left: 20px;
+    }
+    nav ul {
+        margin-right: 10px;
+    }
+    nav ul li {
+        display: none;
+    }
+    .LogoTitre {
+        position: relative;
+        width: 100px;
+        height: 50px;
+    }
+    .logo {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+}
+
+/*-------------------------FIN HEADER-------------------------- */
+
 /* Commentaire test 1*/
+
+.carousel {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=pexels-pixabay-326055.jpg&fm=jpg);
+    background-size: cover;
+    background-position: center;
+}

@@ -160,6 +160,11 @@ nav ul li a {
     opacity: 0;
     z-index: -5;
 }
+
+.voileRechercheOff {
+    display: none;
+}
+
 .voileRechercheOn {
     position: fixed;
     top: 0;
@@ -277,6 +282,10 @@ nav ul li a {
 /*Fin gestion voile */
 
 /*Gestion du voileBurger*/
+
+.voileBurgerOff {
+    display: none;
+}
 
 .voileBurgerOn {
     position: fixed;

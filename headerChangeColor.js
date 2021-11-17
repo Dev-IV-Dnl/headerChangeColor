@@ -34,6 +34,7 @@ btnRecherche.addEventListener("click", (e) => {
     iconeMenuBurgerRecherche.style.cursor = "none";
     navVoileRecherche.style.opacity = "1";
     navVoileRecherche.style.zIndex = "0";
+    voileRecherche.classList.remove("voileRechercheOff");
     voileRecherche.classList.add("voileRechercheOn");
     formRecherche.classList.remove("formRechercheOff");
     formRecherche.classList.add("formRechercheOn");
@@ -47,6 +48,7 @@ croixVoileRecherche.addEventListener("click", (e) => {
     voileRecherche.classList.remove("voileRechercheOn");
     navVoileRecherche.style.zIndex = "-10";
     formRecherche.classList.remove("formRechercheOn");
+    voileRecherche.classList.add("voileRechercheOff");
     formRecherche.classList.add("formRechercheOff");
     inputRecherche.classList.remove("inputRechercheOn");
     inputRecherche.classList.add("inputRechercheOff");
@@ -64,6 +66,7 @@ let navPhone = document.getElementById("navPhone");
 
 //Gestion de l'ouverture du voileBurger :
 iconeMenuBurger.addEventListener("click", (e)=>{
+    voileBurger.classList.remove("voileBurgerOff");
     voileBurger.classList.add("voileBurgerOn");
     navVoileBurger.style.opacity = "1";
     croixVoileBurger.style.border = "none";

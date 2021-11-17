@@ -106,16 +106,16 @@ nav ul li a {
 }
 
 .logo {
-    width: 100px;
+    width: 150px;
     height: 50px;
     margin: 20px;
-    background-image: url(./img/Mon\ logo\ A&M-blanc-crème-rectangulaire-sans-txt.jpg);
+    background-image: url(img/Mon\ logo\ A&M-blanc-rectangulaire-sans-txt.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     transition: linear 0.3s;
 }
 .logo:hover {
-    background-image: url(./img/Mon\ logo\ A&M-noir-rectangulaire-sans-txt.jpg);
+    background-image: url(img/Mon\ logo\ A&M-noir-rectangulaire-sans-txt.jpg);
 }
 
 .text {
@@ -311,6 +311,12 @@ nav ul li a {
 @media screen and (max-width:860px) {
     .LogoTitre p {
         display: none;
+    }
+    .logo {
+        background-image: url(img/Mon\ logo\ A&M\ blanc\ rectangulaire.jpg);
+    }
+    .logo:hover {
+        background-image: url(img/Mon\ logo\ A&M\ noir\ rectangulaire.jpg);
     }
     nav ul {
         margin-right: 10px;

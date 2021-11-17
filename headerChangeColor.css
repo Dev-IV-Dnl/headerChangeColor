@@ -60,12 +60,10 @@ nav ul li a {
     border-radius: 5px;
     margin-right: 20px;
     transition: linear 0.2s;
-    border: solid 1px var(--col2);
+    border: 1px solid var(--col3);
 }
 .iconeMenuBurger:hover {
     cursor: pointer;
-    transform: scale(1.05);
-
 }
 
 .ligne1Burger {
@@ -76,6 +74,7 @@ nav ul li a {
     background-color: var(--col2);
     transition: linear 0.1s;
     border-radius: 50px;
+    border: solid 1px var(--col4);
 }
 .ligne2Burger {
     width: 80%;
@@ -84,6 +83,7 @@ nav ul li a {
     margin-bottom: 3px;
     background-color: var(--col2);
     border-radius: 50px;
+    border: solid 1px var(--col4);
 }
 .ligne3Burger {
     width: 80%;
@@ -93,11 +93,13 @@ nav ul li a {
     background-color: var(--col2);
     transition: linear 0.1s;
     border-radius: 50px;
+    border: solid 1px var(--col4);
 }
 
 .LogoTitre {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: fixed;
     text-decoration: none;
     color: var(--col3);
@@ -128,6 +130,7 @@ nav ul li a {
 
 .bgBlack {
     background-color: var(--col4);
+    box-shadow: 0px 5px 15px;
 }
 
 .btnRecherche {
@@ -334,10 +337,8 @@ nav ul li a {
     .iconeMenuBurger {
         display: flex;
         padding: 2px;
-        margin-left: 20px;
-    }
-    nav ul {
-        margin-right: 10px;
+        margin-left: 10px;
+        margin-right: 5px;
     }
     nav ul li {
         display: none;

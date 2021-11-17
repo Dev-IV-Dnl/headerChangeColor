@@ -1,13 +1,16 @@
 //Header qui change de couleur au scrollY :
 let nav = document.querySelector("#nav");
+let iconeMenuBurger = document.querySelector(".iconeMenuBurger");
 let departScroll = window.pageYOffset;
 
 window.onscroll = function () {
     let top = window.scrollY;
     if (top >= 5) {
         nav.classList.add("bgBlack");
+        iconeMenuBurger.style.border = "1px solid var(--col5)";
     } else if (top <= 5) {
         nav.classList.remove("bgBlack");
+        iconeMenuBurger.style.border = "1px solid var(--col3)";
     }
 }
 

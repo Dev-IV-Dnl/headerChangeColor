@@ -1,6 +1,6 @@
 //Header qui change de couleur au scrollY :
 let nav = document.querySelector("#nav");
-let iconeMenuBurger = document.querySelector(".iconeMenuBurger");
+let iconeMenuBurger = document.querySelector("#iconeMenuBurger");
 let departScroll = window.pageYOffset;
 
 window.onscroll = function () {
@@ -15,22 +15,25 @@ window.onscroll = function () {
 }
 
 
-//Faire apparaître le voileRecherche :
+//Variables pour la recherche :
 let btnRecherche = document.getElementById("btnRecherche");
 let voileRecherche = document.getElementById("voileRecherche");
-let navVoile = document.getElementById("navVoile");
-croixVoileRecherche = document.getElementById("croixVoileRecherche");
+let navVoileRecherche = document.querySelector(".navVoileRecherche");
+let croixVoileRecherche = document.getElementById("croixVoileRecherche");
+let iconeMenuBurgerRecherche = document.getElementById("iconeMenuBurgerRecherche");
 
+//Variables Formulaire :
 let formRecherche = document.querySelector("#formRecherche");
 let inputRecherche = document.querySelector("#inputRecherche");
 let labelRecherche = document.querySelector("#labelRecherche");
 
 
-
+//Gestion de l'évènement click sur la recherche :
 btnRecherche.addEventListener("click", (e) => {
-    navVoile.style.opacity = "1";
-    navVoile.style.zIndex = "0";
-    voileRecherche.classList.remove("voileRechercheOff");
+    iconeMenuBurgerRecherche.style.opacity = "0";
+    iconeMenuBurgerRecherche.style.cursor = "none";
+    navVoileRecherche.style.opacity = "1";
+    navVoileRecherche.style.zIndex = "0";
     voileRecherche.classList.add("voileRechercheOn");
     formRecherche.classList.remove("formRechercheOff");
     formRecherche.classList.add("formRechercheOn");
@@ -39,11 +42,10 @@ btnRecherche.addEventListener("click", (e) => {
     labelRecherche.classList.remove("labelRechercheOff");
     labelRecherche.classList.add("labelRechercheOn");
 })
-
+//Gestion de la fermeture de la recherche :
 croixVoileRecherche.addEventListener("click", (e) => {
     voileRecherche.classList.remove("voileRechercheOn");
-    voileRecherche.classList.add("voileRechercheOff");
-    navVoile.style.zIndex = "-10";
+    navVoileRecherche.style.zIndex = "-10";
     formRecherche.classList.remove("formRechercheOn");
     formRecherche.classList.add("formRechercheOff");
     inputRecherche.classList.remove("inputRechercheOn");
@@ -53,3 +55,24 @@ croixVoileRecherche.addEventListener("click", (e) => {
 })
 
 
+//Variables du menuBurger :
+let voileBurger = document.getElementById("voileBurger");
+let navVoileBurger = document.getElementById("navVoileBurger");
+let croixVoileBurger = document.getElementById("croixVoileBurger");
+let btnVoileBurgerRecherche = document.getElementById("btnVoileBurgerRecherche");
+let navPhone = document.getElementById("navPhone");
+
+//Gestion de l'ouverture du voileBurger :
+iconeMenuBurger.addEventListener("click", (e)=>{
+    voileBurger.classList.add("voileBurgerOn");
+    navVoileBurger.style.opacity = "1";
+    croixVoileBurger.style.border = "none";
+    btnVoileBurgerRecherche.style.opacity = "0";
+    btnVoileBurgerRecherche.style.cursor = "none";
+    navPhone.style.display ="flex";
+})
+
+croixVoileBurger.addEventListener("click", (e)=> {
+    voileBurger.classList.remove("voileBurgerOn");
+    navPhone.style.display ="none";
+})

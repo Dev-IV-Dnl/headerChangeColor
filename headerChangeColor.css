@@ -8,6 +8,7 @@
 }
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
 }
@@ -154,17 +155,17 @@ nav ul li a {
     cursor: pointer;
 }
 
-/*Gestion du voile recherche*/
-.navVoile {
+/*Gestion du voileRecherche*/
+.navVoileRecherche {
     opacity: 0;
-    z-index: -10;
+    z-index: -5;
 }
 .voileRechercheOn {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--col4);
     opacity: 1;
     overflow: hidden;
@@ -273,7 +274,86 @@ nav ul li a {
     display: none;
 }
 
-/*Fin gestion voile recherche */
+/*Fin gestion voile */
+
+/*Gestion du voileBurger*/
+
+.voileBurgerOn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--col4);
+    opacity: 1;
+    overflow: hidden;
+}
+
+.navVoileBurger {
+    opacity: 0;
+    z-index: -5;
+}
+
+#croixVoileBurger .ligne1CroixVoileRecherche {
+    position: absolute;
+    top: 9px;
+    width: 80%;
+    height: 10%;
+    margin-bottom: 4px;
+    transform-origin: left;
+    border-radius: 50px;
+    transform-origin: left;
+    transform: translate(7px, 0px);
+    transform: rotate(45deg);
+}
+#croixVoileBurger .ligne2CroixVoileRecherche {
+    position: absolute;
+    bottom: 6px;
+    width: 80%;
+    height: 10%;
+    margin-top: 4px;
+    transform-origin: left;
+    border-radius: 50px;
+    transform-origin: left;
+    transform: translate(7px, 0px);
+    transform: rotate(-45deg);
+}
+
+.navPhone {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+    overflow-y: scroll;
+}
+.navPhone :nth-child(1), .navPhone :nth-child(2), .navPhone :nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 22%;
+    border: solid 1px var(--col3);
+    text-decoration: none;
+    color: var(--col3);
+    font-size: 50px;
+}
+.navPhone :nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 22%;
+    border: solid 1px var(--col3);
+    border-bottom: none;
+    text-decoration: none;
+    color: var(--col3);
+    font-size: 50px;
+}
+
+/*Fin Gestion du voile*/
 
 @media screen and (min-width:1850px) {
     .formRechercheOn {

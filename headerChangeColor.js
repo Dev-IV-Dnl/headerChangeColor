@@ -3,6 +3,7 @@ let nav = document.querySelector("#nav");
 let iconeMenuBurger = document.querySelector("#iconeMenuBurger");
 let logo = document.querySelector(".logo");
 let departScroll = window.pageYOffset;
+let voileBurger = document.getElementById("voileBurger");
 
 window.onscroll = function () {
     let top = window.scrollY;
@@ -19,7 +20,7 @@ window.onscroll = function () {
         if(window.matchMedia("(max-width:1010px)").matches) {
             logo.style.backgroundImage = "url(img/logo-noir-text.jpg)"; // inverse pour revenir au logo noir d'origine lorsqu'en haut de la page
         } else {
-            logo.style.backgroundImage = "url(img/logo-noir.jpg)"; 
+            logo.style.backgroundImage = "url(img/logo-noir.jpg)";
         }
         iconeMenuBurger.style.border = "1px solid var(--col3)";
     }
@@ -69,7 +70,7 @@ croixVoileRecherche.addEventListener("click", (e) => {
 
 
 //Variables du menuBurger :
-let voileBurger = document.getElementById("voileBurger");
+
 let navVoileBurger = document.getElementById("navVoileBurger");
 let croixVoileBurger = document.getElementById("croixVoileBurger");
 let btnVoileBurgerRecherche = document.getElementById("btnVoileBurgerRecherche");

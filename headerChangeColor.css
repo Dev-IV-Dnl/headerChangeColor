@@ -681,7 +681,7 @@ body {
     background: #FFFFFF;
     box-shadow: 5px 5px 16px #c4c4c4,
         -5px -5px 16px #ffffff;
-    /* background-image: url(../img/img-test-archi.jpg);
+    /* background-image: url(/img/img-test-archi.jpg);
     background-size: cover;
     background-position: center; */
 }
@@ -745,7 +745,7 @@ body {
 .imageEquipe {
     height: 100%;
     width: 50%;
-    background-image: url(./img/imgEquipe.jpg);
+    background-image: url(/img/imgEquipe.jpg);
     background-size: cover;
     background-position: center;
 }

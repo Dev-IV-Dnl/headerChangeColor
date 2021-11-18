@@ -1,6 +1,6 @@
 :root {
     --col1 : #333;
-    --col2: #F1F1F1;
+    --col2: #E1E1E1;
     --col3: white;
     --col4: black;
     --col5: transparent;
@@ -24,12 +24,13 @@ header {
 }
 
 nav {
-    position: fixed;
     width: 100%;
+    position: fixed;
     transition: ease-in-out 0.5s;
 }
 
 nav ul {
+    position: relative;
     padding: 0;
     display: flex;
     align-items: center;
@@ -39,15 +40,72 @@ nav ul {
 }
 
 nav ul li {
+    position: relative;
     display: inline-block;
     list-style: none;
     padding: 23px;
 }
 
-nav ul li a {
+/* .lienNav {
+    display: inline;
     text-decoration: none;
-    color: var(--col3);
+    color: var(--col2);
     font-size: 20px;
+    transition: ease-in-out 0.2s;
+}
+.lienNav:hover {
+    color: var(--col3);
+}
+.lienNav::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: var(--col3);
+    transition: width .2s ease-in-out;
+    border-radius: 50px;
+}
+.lienNav:hover::after {
+    width: 100%;
+} */
+
+.lienNav {
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    color: var(--col3);
+}
+.lienNav::before,
+.lienNav::after {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    background-color: var(--col3);
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    transition: all .2s ease-in-out;
+    border-radius: 100px;   
+}
+.lienNav::before {
+    width: 100%;
+    bottom: 0;
+}
+.lienNav::after {
+    width: 60%;
+    bottom: -5px;
+}
+.lienNav:hover::before,
+.lienNav:hover::after {
+    opacity: 1;
+    transform: translate(-50%, 2px);
+}
+.lienNav::before,
+.lienNav:hover::after {
+    transition-delay: .1s;
+}
+.lienNav:hover::before {
+    transition-delay: 0s;
 }
 
 .iconeMenuBurger {
@@ -112,13 +170,13 @@ nav ul li a {
     width: 150px;
     height: 50px;
     margin: 20px;
-    background-image: url(img/Mon\ logo\ A&M-blanc-rectangulaire-sans-txt.jpg);
+    background-image: url(img/Mon\ logo\ A&M-noir-rectangulaire-sans-txt.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     transition: linear 0.3s;
 }
 .logo:hover {
-    background-image: url(img/Mon\ logo\ A&M-noir-rectangulaire-sans-txt.jpg);
+    background-image: url(img/Mon\ logo\ A&M-blanc-rectangulaire-sans-txt.jpg);
 }
 
 .text {
@@ -131,7 +189,9 @@ nav ul li a {
 
 .bgBlack {
     background-color: var(--col4);
-    box-shadow: 0px 5px 15px;
+}
+.bgBlack:hover {
+    box-shadow: 0px 0px 10px var(--col3);
 }
 
 .btnRecherche {
@@ -142,17 +202,17 @@ nav ul li a {
     justify-content: center;
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: var(--col5);
     color: var(--col2);
     border: none;
     font-size: 25px;
     padding: 20px;
+    transition: ease-in-out .2s;
 }
 .btnRecherche:hover {
+    color: var(--col3);
     cursor: pointer;
+    transform: scale(1.2);
 }
 
 /*Gestion du voileRecherche*/
@@ -407,9 +467,6 @@ nav ul li a {
         display: none;
     }
     .logo {
-        background-image: url(img/Mon\ logo\ A&M\ blanc\ rectangulaire.jpg);
-    }
-    .logo:hover {
         background-image: url(img/Mon\ logo\ A&M\ noir\ rectangulaire.jpg);
     }
     nav ul {

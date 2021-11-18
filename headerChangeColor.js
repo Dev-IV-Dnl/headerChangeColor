@@ -1,14 +1,15 @@
 //Header qui change de couleur au scrollY :
-let nav = document.querySelector("#nav");
+let navigation = document.querySelector("#navigation");
 let iconeMenuBurger = document.querySelector("#iconeMenuBurger");
 let logo = document.querySelector(".logo");
+let lienNav = document.querySelector(".lienNav");
 let departScroll = window.pageYOffset;
 let voileBurger = document.getElementById("voileBurger");
 
 window.onscroll = function () {
     let top = window.scrollY;
     if (top >= 5) {
-        nav.classList.add("bgBlack");
+        navigation.classList.add("bgBlack");
         if(window.matchMedia("(max-width:1010px)").matches) { // si on atteind moins de 1010px on met le logo avec text en le changeant de couleur
             logo.style.backgroundImage = "url(img/logo-blanc-text.jpg)";
         } else {
@@ -16,7 +17,7 @@ window.onscroll = function () {
         }
         iconeMenuBurger.style.border = "1px solid var(--col5)";
     } else if (top <= 5) {
-        nav.classList.remove("bgBlack");
+        navigation.classList.remove("bgBlack");
         if(window.matchMedia("(max-width:1010px)").matches) {
             logo.style.backgroundImage = "url(img/logo-noir-text.jpg)"; // inverse pour revenir au logo noir d'origine lorsqu'en haut de la page
         } else {
@@ -91,3 +92,24 @@ croixVoileBurger.addEventListener("click", (e)=> {
     voileBurger.classList.remove("voileBurgerOn");
     navPhone.style.display ="none";
 })
+
+
+//---------------------------------JS CARDS-------------------------------------
+let card = document.querySelectorAll('.imgCard');
+//Filtre sur tous sauf hover :
+card.forEach(element => {
+    element.addEventListener('mouseover', e => {
+        card.forEach(elementHover => {
+            elementHover.classList.add('imgHover');
+        })
+        if (e.target.classList.contains('imgHover')) {
+            e.target.classList.remove('imgHover');
+            console.log(e.target.classList);
+        }
+    })
+    element.addEventListener('mouseout', e => {
+        card.forEach(elementUnHover => {
+            elementUnHover.classList.remove('imgHover');
+        });
+    });
+});

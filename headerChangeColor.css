@@ -1,5 +1,5 @@
 :root {
-    --col1 : #333;
+    --col1: #333;
     --col2: #E1E1E1;
     --col3: white;
     --col4: black;
@@ -13,24 +13,27 @@ body {
     padding: 0;
 }
 
-*{
+* {
     font-family: 'Michroma', sans-serif;
     font-size: 10px;
 }
 
 /*------------------------HEADER------------------------ */
 
-header {
+.monHeader {
     width: 100%;
+    z-index: 5;
 }
 
-nav {
+.navigation {
     width: 100%;
+    height: auto;
     position: fixed;
     transition: ease-in-out 0.5s;
+    z-index: 5;
 }
 
-nav ul {
+.navigation ul {
     position: relative;
     padding: 0;
     display: flex;
@@ -40,11 +43,11 @@ nav ul {
     margin-right: 20px;
 }
 
-nav ul li {
+.navigation ul li {
     position: relative;
     display: inline-block;
     list-style: none;
-    padding: 27px;
+    padding: 25px;
 }
 
 /* .lienNav {
@@ -75,36 +78,49 @@ nav ul li {
     text-decoration: none;
     position: relative;
     color: var(--col3);
+    text-shadow: 1px 1px 2px var(--col4);
+    transition: ease-in-out .2s;
 }
+
+.lienNav:hover {
+    color: var(--col3);
+    text-shadow: 1px 1px 5px var(--col4);
+}
+
 .lienNav::before,
 .lienNav::after {
     content: "";
     position: absolute;
-    height: 1px;
+    height: 1.5px;
+    box-shadow: 0 1px 1px var(--col4);
     background-color: var(--col3);
     opacity: 0;
     left: 50%;
     transform: translate(-50%, 10px);
     transition: all .2s ease-in-out;
-    border-radius: 100px;   
 }
+
 .lienNav::before {
     width: 100%;
     bottom: 0;
 }
+
 .lienNav::after {
     width: 60%;
     bottom: -5px;
 }
+
 .lienNav:hover::before,
 .lienNav:hover::after {
     opacity: 1;
     transform: translate(-50%, 2px);
 }
+
 .lienNav::before,
 .lienNav:hover::after {
     transition-delay: .1s;
 }
+
 .lienNav:hover::before {
     transition-delay: 0s;
 }
@@ -122,6 +138,7 @@ nav ul li {
     transition: linear 0.2s;
     border: 1px solid var(--col3);
 }
+
 .iconeMenuBurger:hover {
     cursor: pointer;
 }
@@ -136,6 +153,7 @@ nav ul li {
     border-radius: 50px;
     border: solid 1px var(--col4);
 }
+
 .ligne2Burger {
     width: 80%;
     height: 10%;
@@ -145,6 +163,7 @@ nav ul li {
     border-radius: 50px;
     border: solid 1px var(--col4);
 }
+
 .ligne3Burger {
     width: 80%;
     height: 10%;
@@ -164,6 +183,7 @@ nav ul li {
     text-decoration: none;
     color: var(--col3);
 }
+
 .premLettre {
     color: red;
     font-size: 15px;
@@ -173,14 +193,16 @@ nav ul li {
 .logo {
     width: 150px;
     height: 75px;
-    margin: 10px;
+    margin: 3.5px;
+    margin-right: 20px;
     background-image: url(img/logo-noir.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     transition: linear .3s;
 }
+
 .logo:hover {
-    background-image: url(img/logo-blanc.jpg);
+    background-image: url(img/logo-blanc.jpg) !important;
 }
 
 .text {
@@ -194,15 +216,13 @@ nav ul li {
 .bgBlack {
     background-color: var(--col4);
 }
+
 .bgBlack:hover {
     box-shadow: 0px 0px 10px var(--col3);
 }
 
 .btnRecherche {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
@@ -212,11 +232,22 @@ nav ul li {
     padding: 20px;
     transition: ease-in-out .2s;
 }
-.btnRecherche i {
+
+#btnRecherche i {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
     font-size: 25px;
+    text-shadow: 1px 1px 2px var(--col4);
+    transition: ease-in-out .2s;
 }
 
-.btnRecherche:hover {
+#btnRecherche i:hover {
+
+    text-shadow: 1px 1px 5px var(--col4);
+}
+
+#btnRecherche:hover {
     color: var(--col3);
     cursor: pointer;
     transform: scale(1.2);
@@ -241,6 +272,7 @@ nav ul li {
     background-color: var(--col4);
     opacity: 1;
     overflow: hidden;
+    z-index: 5;
 }
 
 .ligne1CroixVoileRecherche {
@@ -255,6 +287,7 @@ nav ul li {
     transform: translate(7px, 0px);
     transform: rotate(45deg);
 }
+
 .ligne2CroixVoileRecherche {
     position: absolute;
     bottom: 6px;
@@ -267,6 +300,7 @@ nav ul li {
     transform: translate(7px, 0px);
     transform: rotate(-45deg);
 }
+
 .ligne1CroixVoileRecherche, .ligne2CroixVoileRecherche {
     background-color: var(--col3);
 }
@@ -274,6 +308,7 @@ nav ul li {
 .labelRechercheOff {
     display: none;
 }
+
 .labelRechercheOn {
     display: flex;
 }
@@ -283,14 +318,16 @@ nav ul li {
     margin-left: 120px;
     width: 80%;
     background: var(--col4);
-    padding: 30px;
+    padding: 25px;
     overflow: hidden;
 }
+
 .formRechercheOn .divInputRecherche {
     position: relative;
     height: 40px;
     width: 100%;
 }
+
 .formRechercheOn .divInputRecherche input {
     width: 100%;
     height: 100%;
@@ -301,6 +338,7 @@ nav ul li {
     border-bottom: 2px solid var(--col2);
     outline: none;
 }
+
 .formRechercheOn .divInputRecherche label {
     position: absolute;
     bottom: 10px;
@@ -310,18 +348,21 @@ nav ul li {
     pointer-events: none;
     transition: all 0.5s ease;
 }
-.divInputRecherche input:focus ~ label,
-.divInputRecherche input:valid ~ label {
+
+.divInputRecherche input:focus~label,
+.divInputRecherche input:valid~label {
     transform: translateY(-30px);
     color: var(--col7);
     font-size: 12px;
 }
+
 .formRechercheOn .divInputRecherche .underline {
     position: absolute;
-    bottom: -5px;
+    bottom: -1px;
     height: 4px;
     width: 102%;
 }
+
 .divInputRecherche .underline:before {
     position: absolute;
     content: "";
@@ -331,8 +372,9 @@ nav ul li {
     transform: scaleX(0);
     transition: transform 0.5s ease;
 }
-.divInputRecherche input:focus ~ .underline:before,
-.divInputRecherche input:valid ~ .underline:before {
+
+.divInputRecherche input:focus~.underline:before,
+.divInputRecherche input:valid~.underline:before {
     transform: scaleX(1);
 }
 
@@ -361,6 +403,7 @@ nav ul li {
     background-color: var(--col4);
     opacity: 1;
     overflow: hidden;
+    z-index: 5;
 }
 
 .navVoileBurger {
@@ -380,6 +423,7 @@ nav ul li {
     transform: translate(7px, 0px);
     transform: rotate(45deg);
 }
+
 #croixVoileBurger .ligne2CroixVoileRecherche {
     position: absolute;
     bottom: 6px;
@@ -403,9 +447,11 @@ nav ul li {
     z-index: -20;
     overflow-y: scroll;
 }
+
 .navPhone :nth-child(1) {
     border-top: solid 1px var(--col2);
 }
+
 .navPhone :nth-child(1), .navPhone :nth-child(2), .navPhone :nth-child(3) {
     display: flex;
     justify-content: center;
@@ -417,6 +463,7 @@ nav ul li {
     color: var(--col3);
     font-size: 30px;
 }
+
 .navPhone :nth-child(4) {
     display: flex;
     justify-content: center;
@@ -457,13 +504,15 @@ nav ul li {
 
 @media screen and (max-width:650px) {
     .formRechercheOn {
-        margin-left: 20px;
+        margin-left: 30px;
+        width: 90%;
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:540px) {
     .formRechercheOn {
         margin-left: 0px;
+        width: 100%;
     }
 }
 
@@ -471,39 +520,46 @@ nav ul li {
     .LogoTitre p {
         display: none;
     }
+
     .logo {
         background-image: url(img/logo-noir-text.jpg);
     }
+
     .logo:hover {
         background-image: url(img/logo-blanc-text.jpg);
     }
-    nav ul {
+
+    .navigation ul {
         margin-right: 10px;
     }
 }
 
 @media screen and (max-width:767px) {
-    nav {
+    .navigation {
         height: 80px;
         bottom: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     .iconeMenuBurger {
         display: flex;
         padding: 2px;
         margin-left: 10px;
         margin-right: 5px;
     }
-    nav ul li {
+
+    .navigation ul li {
         display: none;
     }
+
     .LogoTitre {
         position: relative;
         width: 100px;
         height: 50px;
     }
+
     .logo {
         width: 100%;
         height: 100%;
@@ -516,9 +572,237 @@ nav ul li {
 /* Commentaire test 1*/
 
 .monCarousel {
+    margin: 0 auto;
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url(https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=pexels-pixabay-326055.jpg&fm=jpg);
+    z-index: 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
+}
+
+.carousel-caption>h1, .carousel-caption>h4 {
+    text-shadow: 0px 0px 5px black;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 50%;
+    height: 100%;
+}
+
+.carousel-control-next-icon {
+    position: absolute;
+    right: 40px;
+}
+
+.carousel-control-prev-icon {
+    position: absolute;
+    left: 40px;
+}
+
+@media screen and (maxwidth: 1010px) {
+    .monCarousel {
+        height: 50vh !important;
+    }
+}
+
+
+/* -------------------------CARDS----------------------------- */
+
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--col2);
+}
+
+.tousProjets {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--col3);
+    margin-top: 10px;
+}
+
+.card {
+    margin-top: 50px;
+    position: relative;
+    width: 300px;
+    height: 380px;
+    margin: 20px;
+    background-color: var(--col8);
+    border: none;
+}
+
+.imgHover {
+    /* opacity: 0.5; */
+    filter: grayscale(1);
+}
+
+.lienCard {
+    text-decoration: none;
+    color: var(--col1);
+    transition: ease-in-out 0.3s;
+}
+
+.lienCard:hover {
+    color: var(--col4);
+    transform: scale(1.02);
+    text-shadow: 0 0 0.5px;
+}
+
+.divImg {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 2px;
+    transition: ease-in-out 0.2s;
+    border-radius: 0px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 16px #c4c4c4,
+        -5px -5px 16px #ffffff;
+    /* background-image: url(../img/img-test-archi.jpg);
+    background-size: cover;
+    background-position: center; */
+}
+
+.imgCard {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: ease-in-out .5s;
+}
+
+.imgCard:hover {
+    transform: scale(1.1);
+}
+
+.divInfos {
+    background-color: var(--col8);
+    width: 100%;
+    height: 50px;
+}
+
+.divHrCard {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    margin-bottom: 10px;
+}
+
+.hrCard {
+    position: absolute;
+    width: 5%;
+    height: 1px;
+    border: 1px solid var(--col4);
+    background-color: var(--col4);
+    opacity: 1;
+}
+
+.infos {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+}
+
+.titreCard {
+    font-weight: bold;
+}
+
+/* -------------------------A Propos Accueil----------------------------- */
+
+.aPropos {
+    margin: 0 auto;
+    width: 95%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    background-color: col3;
+    margin-top: 10px;
+}
+
+.imageEquipe {
+    height: 100%;
+    width: 50%;
+    background-image: url(./img/imgEquipe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.equipe {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+
+
+/* -------------------------Actualités accueil----------------------------- */
+
+.sectionActu {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--col3);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.sectionActu h2 {
+    margin-top: 30px;
+}
+
+.accueilActu {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+/* -------------------------Footer----------------------------- */
+
+footer {
+    margin-bottom: 0px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: var(--col3);
+    margin-top: 10px;
 }

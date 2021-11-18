@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Police google-->
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+    <!--Css Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     <!--CSS Font Awesome-->
     <link rel="stylesheet" href=" https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css">
 
     <link rel="stylesheet" href="headerChangeColor.css">
 
+    <!--JS Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+
     <script src="./headerChangeColor.js" defer></script>
-    <title>Header ChangeColor</title>
+    <title>Accueil test</title>
 </head>
 
 <body>
     <!---------------------------------HEADER------------------------------------>
 
-    <header>
-        <nav id="nav" class="nav">
+    <header class="monHeader">
+        <nav id="navigation" class="navigation">
             <div id="iconeMenuBurger" class="iconeMenuBurger">
                 <div class="ligne1Burger"></div>
                 <div class="ligne2Burger"></div>
@@ -39,7 +47,7 @@
             </ul>
         </nav>
         <div id="voileRecherche" class="voileRechercheOff">
-            <nav id="navVoileRecherche" class="navVoileRecherche">
+            <nav id="navVoileRecherche" class="navVoileRecherche navigation">
                 <div id="iconeMenuBurgerRecherche" class="iconeMenuBurger">
                     <div class="ligne1Burger"></div>
                     <div class="ligne2Burger"></div>
@@ -53,7 +61,7 @@
                     <li><a class="lienNav" href="">Projets</a></li>
                     <li><a class="lienNav" href="">À propos</a></li>
                     <li><a class="lienNav" href="">Actualité</a></li>
-                    <button id="croixVoileRecherche" class="btnRecherche croixVoileRechercheOff">
+                    <button id="croixVoileRecherche" class="btnRecherche">
                         <div class="ligne1CroixVoileRecherche"></div>
                         <div class="ligne2CroixVoileRecherche"></div>
                     </button>
@@ -70,7 +78,7 @@
         </div>
     </header>
     <div id="voileBurger" class="voileBurgerOff">
-        <nav id="navVoileBurger" class="navVoileBurger">
+        <nav id="navVoileBurger" class="navVoileBurger navigation">
             <div id="croixVoileBurger" class="iconeMenuBurger">
                 <div class="ligne1CroixVoileRecherche"></div>
                 <div class="ligne2CroixVoileRecherche"></div>
@@ -96,158 +104,273 @@
 
     <!---------------------------------CAROUSEL------------------------------------>
 
-    <div class="monCarousel"></div>
+    <section class="monCarousel">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image:url(./img/4\ PASTEUR\ K.jpg);">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                        <h1>Premier slide</h1>
+                        <h4>Description du premier slide.</h4>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image:url(./img/1\ CHRU.JPG);">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Second slide</h1>
+                        <h4>Description du second slide.</h4>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image:url(./img/1\ PME.JPG);">
+                    <div class="carousel-caption d-none d-md-block text-end">
+                        <h1>Troisième slide</h1>
+                        <h4>Description du troisième slide.</h4>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
 
-    <div class="text">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut libero dolor a saepe quo aperiam voluptatem, ut
-            porro, voluptas unde deserunt assumenda similique! Eum error aspernatur reiciendis necessitatibus,
-            voluptatem, exercitationem molestiae quas vitae magni numquam autem nostrum debitis sapiente consequatur
-            unde officia saepe voluptates facere impedit officiis velit nihil, iure repudiandae? Quae minus perferendis
-            maxime tenetur natus error placeat amet autem quod sapiente minima ullam laborum iure facilis cumque
-            doloremque repellat adipisci numquam architecto nihil, esse iusto unde omnis? Exercitationem in nesciunt
-            accusamus ipsa, accusantium optio sunt odit sed, laboriosam tempore delectus fugit deleniti dolorem? Tempore
-            rerum eaque odit, fugiat delectus asperiores doloremque iste, ea doloribus impedit, magni assumenda!
-            Architecto, ipsum? Id voluptas ut sed nostrum deserunt rerum, assumenda eius facere facilis ex esse quo
-            minus distinctio fugit, obcaecati illum nihil ipsam eum delectus eligendi non tenetur inventore deleniti
-            sequi? Eos dolor aliquid velit quasi, repellat explicabo vitae voluptatibus in quas odit quis voluptates a
-            iusto tempore perferendis! Omnis libero dolorum nesciunt aut totam veritatis reiciendis nam dolore atque
-            animi suscipit qui porro tempore quas adipisci est, nihil delectus cumque voluptate quam nisi repudiandae.
-            Magni quo unde aliquid facilis, dicta laudantium adipisci deserunt minima cum placeat voluptatibus, fugit
-            molestiae amet explicabo inventore dignissimos pariatur voluptate vel reiciendis modi qui accusantium. Vel
-            officia quia atque itaque nisi error voluptatem nostrum corporis, ipsa nihil aliquam eligendi dolorem
-            blanditiis culpa vitae. Eligendi praesentium in accusantium mollitia rerum possimus sit explicabo, debitis
-            minus voluptate ad, perspiciatis similique necessitatibus? Iure voluptatem quaerat distinctio deserunt
-            possimus quas ex veniam ad nihil ratione consequatur rerum veritatis, ipsum, asperiores mollitia dolore
-            laudantium ipsam magnam. Commodi rem delectus facere consequuntur sunt provident error libero veritatis
-            tempora, vitae omnis cum nulla nihil officia mollitia distinctio quae impedit reiciendis ullam. Consectetur,
-            repellendus in! Impedit, saepe. Laboriosam voluptatum omnis molestias, at voluptatibus enim illum dolor nemo
-            delectus officia laborum dolore dolorum sed, quo minima quae temporibus facilis quia rem illo, veniam
-            impedit repellat aut eos. Itaque sint sequi adipisci voluptatum odit repudiandae natus, est magni. Molestiae
-            eaque deserunt minima doloribus natus excepturi optio perferendis rerum amet iure consequatur soluta dolore
-            sapiente assumenda ipsam obcaecati corporis ea adipisci molestias dolorem, fugit repellat illo ducimus.
-            Commodi, exercitationem veritatis! Temporibus consectetur quod architecto neque provident! Eius quidem nam
-            similique explicabo excepturi nesciunt iure, reprehenderit eos dicta minus deserunt magnam officiis
-            consectetur amet vel quae repellendus provident perferendis saepe! Eius ullam culpa vero deleniti blanditiis
-            perspiciatis debitis odit esse qui. Voluptates enim iste iure ea, nobis eligendi modi asperiores rerum
-            quaerat praesentium neque doloribus quo odio rem, fuga ex esse unde! Facere eaque dolor ab sapiente
-            excepturi molestiae repellendus nemo cum, atque, quis quibusdam mollitia. Earum odit aspernatur repellendus
-            voluptas! Pariatur maiores dolor voluptatem molestiae. Obcaecati, in corrupti? Sit cum consectetur possimus,
-            libero, voluptas laudantium optio laboriosam totam aut repellendus tempora quis exercitationem ad adipisci
-            natus id quod mollitia facilis quae asperiores, delectus aliquid voluptatum eveniet. Quis dolorum veniam eum
-            ducimus voluptas ipsa unde, expedita quia, quam vel blanditiis repudiandae velit sunt neque! Porro, iste
-            quisquam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut libero dolor a saepe quo aperiam voluptatem, ut
-            porro, voluptas unde deserunt assumenda similique! Eum error aspernatur reiciendis necessitatibus,
-            voluptatem, exercitationem molestiae quas vitae magni numquam autem nostrum debitis sapiente consequatur
-            unde officia saepe voluptates facere impedit officiis velit nihil, iure repudiandae? Quae minus perferendis
-            maxime tenetur natus error placeat amet autem quod sapiente minima ullam laborum iure facilis cumque
-            doloremque repellat adipisci numquam architecto nihil, esse iusto unde omnis? Exercitationem in nesciunt
-            accusamus ipsa, accusantium optio sunt odit sed, laboriosam tempore delectus fugit deleniti dolorem? Tempore
-            rerum eaque odit, fugiat delectus asperiores doloremque iste, ea doloribus impedit, magni assumenda!
-            Architecto, ipsum? Id voluptas ut sed nostrum deserunt rerum, assumenda eius facere facilis ex esse quo
-            minus distinctio fugit, obcaecati illum nihil ipsam eum delectus eligendi non tenetur inventore deleniti
-            sequi? Eos dolor aliquid velit quasi, repellat explicabo vitae voluptatibus in quas odit quis voluptates a
-            iusto tempore perferendis! Omnis libero dolorum nesciunt aut totam veritatis reiciendis nam dolore atque
-            animi suscipit qui porro tempore quas adipisci est, nihil delectus cumque voluptate quam nisi repudiandae.
-            Magni quo unde aliquid facilis, dicta laudantium adipisci deserunt minima cum placeat voluptatibus, fugit
-            molestiae amet explicabo inventore dignissimos pariatur voluptate vel reiciendis modi qui accusantium. Vel
-            officia quia atque itaque nisi error voluptatem nostrum corporis, ipsa nihil aliquam eligendi dolorem
-            blanditiis culpa vitae. Eligendi praesentium in accusantium mollitia rerum possimus sit explicabo, debitis
-            minus voluptate ad, perspiciatis similique necessitatibus? Iure voluptatem quaerat distinctio deserunt
-            possimus quas ex veniam ad nihil ratione consequatur rerum veritatis, ipsum, asperiores mollitia dolore
-            laudantium ipsam magnam. Commodi rem delectus facere consequuntur sunt provident error libero veritatis
-            tempora, vitae omnis cum nulla nihil officia mollitia distinctio quae impedit reiciendis ullam. Consectetur,
-            repellendus in! Impedit, saepe. Laboriosam voluptatum omnis molestias, at voluptatibus enim illum dolor nemo
-            delectus officia laborum dolore dolorum sed, quo minima quae temporibus facilis quia rem illo, veniam
-            impedit repellat aut eos. Itaque sint sequi adipisci voluptatum odit repudiandae natus, est magni. Molestiae
-            eaque deserunt minima doloribus natus excepturi optio perferendis rerum amet iure consequatur soluta dolore
-            sapiente assumenda ipsam obcaecati corporis ea adipisci molestias dolorem, fugit repellat illo ducimus.
-            Commodi, exercitationem veritatis! Temporibus consectetur quod architecto neque provident! Eius quidem nam
-            similique explicabo excepturi nesciunt iure, reprehenderit eos dicta minus deserunt magnam officiis
-            consectetur amet vel quae repellendus provident perferendis saepe! Eius ullam culpa vero deleniti blanditiis
-            perspiciatis debitis odit esse qui. Voluptates enim iste iure ea, nobis eligendi modi asperiores rerum
-            quaerat praesentium neque doloribus quo odio rem, fuga ex esse unde! Facere eaque dolor ab sapiente
-            excepturi molestiae repellendus nemo cum, atque, quis quibusdam mollitia. Earum odit aspernatur repellendus
-            voluptas! Pariatur maiores dolor voluptatem molestiae. Obcaecati, in corrupti? Sit cum consectetur possimus,
-            libero, voluptas laudantium optio laboriosam totam aut repellendus tempora quis exercitationem ad adipisci
-            natus id quod mollitia facilis quae asperiores, delectus aliquid voluptatum eveniet. Quis dolorum veniam eum
-            ducimus voluptas ipsa unde, expedita quia, quam vel blanditiis repudiandae velit sunt neque! Porro, iste
-            quisquam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut libero dolor a saepe quo aperiam voluptatem, ut
-            porro, voluptas unde deserunt assumenda similique! Eum error aspernatur reiciendis necessitatibus,
-            voluptatem, exercitationem molestiae quas vitae magni numquam autem nostrum debitis sapiente consequatur
-            unde officia saepe voluptates facere impedit officiis velit nihil, iure repudiandae? Quae minus perferendis
-            maxime tenetur natus error placeat amet autem quod sapiente minima ullam laborum iure facilis cumque
-            doloremque repellat adipisci numquam architecto nihil, esse iusto unde omnis? Exercitationem in nesciunt
-            accusamus ipsa, accusantium optio sunt odit sed, laboriosam tempore delectus fugit deleniti dolorem? Tempore
-            rerum eaque odit, fugiat delectus asperiores doloremque iste, ea doloribus impedit, magni assumenda!
-            Architecto, ipsum? Id voluptas ut sed nostrum deserunt rerum, assumenda eius facere facilis ex esse quo
-            minus distinctio fugit, obcaecati illum nihil ipsam eum delectus eligendi non tenetur inventore deleniti
-            sequi? Eos dolor aliquid velit quasi, repellat explicabo vitae voluptatibus in quas odit quis voluptates a
-            iusto tempore perferendis! Omnis libero dolorum nesciunt aut totam veritatis reiciendis nam dolore atque
-            animi suscipit qui porro tempore quas adipisci est, nihil delectus cumque voluptate quam nisi repudiandae.
-            Magni quo unde aliquid facilis, dicta laudantium adipisci deserunt minima cum placeat voluptatibus, fugit
-            molestiae amet explicabo inventore dignissimos pariatur voluptate vel reiciendis modi qui accusantium. Vel
-            officia quia atque itaque nisi error voluptatem nostrum corporis, ipsa nihil aliquam eligendi dolorem
-            blanditiis culpa vitae. Eligendi praesentium in accusantium mollitia rerum possimus sit explicabo, debitis
-            minus voluptate ad, perspiciatis similique necessitatibus? Iure voluptatem quaerat distinctio deserunt
-            possimus quas ex veniam ad nihil ratione consequatur rerum veritatis, ipsum, asperiores mollitia dolore
-            laudantium ipsam magnam. Commodi rem delectus facere consequuntur sunt provident error libero veritatis
-            tempora, vitae omnis cum nulla nihil officia mollitia distinctio quae impedit reiciendis ullam. Consectetur,
-            repellendus in! Impedit, saepe. Laboriosam voluptatum omnis molestias, at voluptatibus enim illum dolor nemo
-            delectus officia laborum dolore dolorum sed, quo minima quae temporibus facilis quia rem illo, veniam
-            impedit repellat aut eos. Itaque sint sequi adipisci voluptatum odit repudiandae natus, est magni. Molestiae
-            eaque deserunt minima doloribus natus excepturi optio perferendis rerum amet iure consequatur soluta dolore
-            sapiente assumenda ipsam obcaecati corporis ea adipisci molestias dolorem, fugit repellat illo ducimus.
-            Commodi, exercitationem veritatis! Temporibus consectetur quod architecto neque provident! Eius quidem nam
-            similique explicabo excepturi nesciunt iure, reprehenderit eos dicta minus deserunt magnam officiis
-            consectetur amet vel quae repellendus provident perferendis saepe! Eius ullam culpa vero deleniti blanditiis
-            perspiciatis debitis odit esse qui. Voluptates enim iste iure ea, nobis eligendi modi asperiores rerum
-            quaerat praesentium neque doloribus quo odio rem, fuga ex esse unde! Facere eaque dolor ab sapiente
-            excepturi molestiae repellendus nemo cum, atque, quis quibusdam mollitia. Earum odit aspernatur repellendus
-            voluptas! Pariatur maiores dolor voluptatem molestiae. Obcaecati, in corrupti? Sit cum consectetur possimus,
-            libero, voluptas laudantium optio laboriosam totam aut repellendus tempora quis exercitationem ad adipisci
-            natus id quod mollitia facilis quae asperiores, delectus aliquid voluptatum eveniet. Quis dolorum veniam eum
-            ducimus voluptas ipsa unde, expedita quia, quam vel blanditiis repudiandae velit sunt neque! Porro, iste
-            quisquam.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut libero dolor a saepe quo aperiam voluptatem, ut
-            porro, voluptas unde deserunt assumenda similique! Eum error aspernatur reiciendis necessitatibus,
-            voluptatem, exercitationem molestiae quas vitae magni numquam autem nostrum debitis sapiente consequatur
-            unde officia saepe voluptates facere impedit officiis velit nihil, iure repudiandae? Quae minus perferendis
-            maxime tenetur natus error placeat amet autem quod sapiente minima ullam laborum iure facilis cumque
-            doloremque repellat adipisci numquam architecto nihil, esse iusto unde omnis? Exercitationem in nesciunt
-            accusamus ipsa, accusantium optio sunt odit sed, laboriosam tempore delectus fugit deleniti dolorem? Tempore
-            rerum eaque odit, fugiat delectus asperiores doloremque iste, ea doloribus impedit, magni assumenda!
-            Architecto, ipsum? Id voluptas ut sed nostrum deserunt rerum, assumenda eius facere facilis ex esse quo
-            minus distinctio fugit, obcaecati illum nihil ipsam eum delectus eligendi non tenetur inventore deleniti
-            sequi? Eos dolor aliquid velit quasi, repellat explicabo vitae voluptatibus in quas odit quis voluptates a
-            iusto tempore perferendis! Omnis libero dolorum nesciunt aut totam veritatis reiciendis nam dolore atque
-            animi suscipit qui porro tempore quas adipisci est, nihil delectus cumque voluptate quam nisi repudiandae.
-            Magni quo unde aliquid facilis, dicta laudantium adipisci deserunt minima cum placeat voluptatibus, fugit
-            molestiae amet explicabo inventore dignissimos pariatur voluptate vel reiciendis modi qui accusantium. Vel
-            officia quia atque itaque nisi error voluptatem nostrum corporis, ipsa nihil aliquam eligendi dolorem
-            blanditiis culpa vitae. Eligendi praesentium in accusantium mollitia rerum possimus sit explicabo, debitis
-            minus voluptate ad, perspiciatis similique necessitatibus? Iure voluptatem quaerat distinctio deserunt
-            possimus quas ex veniam ad nihil ratione consequatur rerum veritatis, ipsum, asperiores mollitia dolore
-            laudantium ipsam magnam. Commodi rem delectus facere consequuntur sunt provident error libero veritatis
-            tempora, vitae omnis cum nulla nihil officia mollitia distinctio quae impedit reiciendis ullam. Consectetur,
-            repellendus in! Impedit, saepe. Laboriosam voluptatum omnis molestias, at voluptatibus enim illum dolor nemo
-            delectus officia laborum dolore dolorum sed, quo minima quae temporibus facilis quia rem illo, veniam
-            impedit repellat aut eos. Itaque sint sequi adipisci voluptatum odit repudiandae natus, est magni. Molestiae
-            eaque deserunt minima doloribus natus excepturi optio perferendis rerum amet iure consequatur soluta dolore
-            sapiente assumenda ipsam obcaecati corporis ea adipisci molestias dolorem, fugit repellat illo ducimus.
-            Commodi, exercitationem veritatis! Temporibus consectetur quod architecto neque provident! Eius quidem nam
-            similique explicabo excepturi nesciunt iure, reprehenderit eos dicta minus deserunt magnam officiis
-            consectetur amet vel quae repellendus provident perferendis saepe! Eius ullam culpa vero deleniti blanditiis
-            perspiciatis debitis odit esse qui. Voluptates enim iste iure ea, nobis eligendi modi asperiores rerum
-            quaerat praesentium neque doloribus quo odio rem, fuga ex esse unde! Facere eaque dolor ab sapiente
-            excepturi molestiae repellendus nemo cum, atque, quis quibusdam mollitia. Earum odit aspernatur repellendus
-            voluptas! Pariatur maiores dolor voluptatem molestiae. Obcaecati, in corrupti? Sit cum consectetur possimus,
-            libero, voluptas laudantium optio laboriosam totam aut repellendus tempora quis exercitationem ad adipisci
-            natus id quod mollitia facilis quae asperiores, delectus aliquid voluptatum eveniet. Quis dolorum veniam eum
-            ducimus voluptas ipsa unde, expedita quia, quam vel blanditiis repudiandae velit sunt neque! Porro, iste
-            quisquam.</p>
-    </div>
+    
+
+    <!------------------------------------------CARDS-------------------------------------->
+
+    <section class="tousProjets">
+        <div class="card">
+            <a href="#" class="lienCard">
+                <div class="divImg">
+                    <img class="imgCard" src="./img/img-test-archi.jpg" alt="">
+                </div>
+                <div class="divInfos">
+                    <div class="divHrCard">
+                        <hr class="hrCard">
+                    </div>
+                    <div class="infos">
+                        <span class="titreCard">Siège Opadoma</span><br>
+                        <span class="catégorieCard">Bureaux</span><br>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#" class="lienCard">
+                <div class="divImg">
+                    <img class="imgCard" src="./img/4 PASTEUR K.jpg" alt="">
+                </div>
+                <div class="divInfos">
+                    <div class="divHrCard">
+                        <hr class="hrCard">
+                    </div>
+                    <div class="infos">
+                        <span class="titreCard">Siège Opadoma</span><br>
+                        <span class="catégorieCard">Bureaux</span><br>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#" class="lienCard">
+                <div class="divImg">
+                    <img class="imgCard" src="./img/1 CHRU.JPG" alt="">
+                </div>
+                <div class="divInfos">
+                    <div class="divHrCard">
+                        <hr class="hrCard">
+                    </div>
+                    <div class="infos">
+                        <span class="titreCard">Siège Opadoma</span><br>
+                        <span class="catégorieCard">Bureaux</span><br>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#" class="lienCard">
+                <div class="divImg">
+                    <img class="imgCard" src="./img/3 FAM.jpg" alt="">
+                </div>
+                <div class="divInfos">
+                    <div class="divHrCard">
+                        <hr class="hrCard">
+                    </div>
+                    <div class="infos">
+                        <span class="titreCard">Siège Opadoma</span><br>
+                        <span class="catégorieCard">Bureaux</span><br>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#" class="lienCard">
+                <div class="divImg">
+                    <img class="imgCard" src="./img//Aérienne_F04.JPG" alt="">
+                </div>
+                <div class="divInfos">
+                    <div class="divHrCard">
+                        <hr class="hrCard">
+                    </div>
+                    <div class="infos">
+                        <span class="titreCard">Siège Opadoma</span><br>
+                        <span class="catégorieCard">Bureaux</span><br>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#" class="lienCard">
+                <div class="divImg">
+                    <img class="imgCard" src="./img/1 PME.JPG" alt="">
+                </div>
+                <div class="divInfos">
+                    <div class="divHrCard">
+                        <hr class="hrCard">
+                    </div>
+                    <div class="infos">
+                        <span class="titreCard">Siège Opadoma</span><br>
+                        <span class="catégorieCard">Bureaux</span><br>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#" class="lienCard">
+                <div class="divImg">
+                    <img class="imgCard" src="./img/1 ESAT.jpg" alt="">
+                </div>
+                <div class="divInfos">
+                    <div class="divHrCard">
+                        <hr class="hrCard">
+                    </div>
+                    <div class="infos">
+                        <span class="titreCard">Siège Opadoma</span><br>
+                        <span class="catégorieCard">Bureaux</span><br>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#" class="lienCard">
+                <div class="divImg">
+                    <img class="imgCard" src="./img/6 EHPAD.jpg" alt="">
+                </div>
+                <div class="divInfos">
+                    <div class="divHrCard">
+                        <hr class="hrCard">
+                    </div>
+                    <div class="infos">
+                        <span class="titreCard">Siège Opadoma</span><br>
+                        <span class="catégorieCard">Bureaux</span><br>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!------------------------------------------A Propos-------------------------------------->
+
+    <section class="aPropos">
+        <div class="imageEquipe"></div>
+        <div class="equipe">
+            <h3>L'équipe :</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, modi. Cumque recusandae, ipsam suscipit
+                quasi sapiente totam nihil et rem delectus amet sequi ad expedita ratione eligendi aspernatur est
+                numquam officia aperiam pariatur fugiat, consequuntur aut consectetur iusto. Nam vero ea debitis at
+                facere blanditiis est vel eum mollitia aperiam voluptate tempora, natus a recusandae amet doloremque
+                accusamus facilis consequuntur dignissimos molestias vitae cumque eaque quibusdam dolores? Earum qui
+                recusandae veritatis fugiat consectetur cum temporibus alias perferendis aut. Officia tempore at
+                similique? Id rem quos beatae laboriosam doloribus cumque eum culpa provident, necessitatibus excepturi
+                dicta? Provident culpa aliquid error, fugit et amet ad dolor voluptates id aspernatur neque nesciunt nam
+                minus ratione, dicta animi nihil tempore exercitationem? Exercitationem, veritatis ipsum. Maxime nulla
+                aut id quidem! Qui vel dolores magnam tempora, reprehenderit iure error, iusto, eaque placeat vitae
+                tempore voluptas eveniet. Voluptatum sunt perferendis, cupiditate ad voluptates sequi laborum ipsa
+                recusandae, qui, corporis incidunt ea.</p>
+        </div>
+    </section>
+
+
+
+    <!------------------------------------------Actualités-------------------------------------->
+
+    <section class="sectionActu">
+        <h2>Actualités</h2>
+        <div class="accueilActu">
+            <div class="card">
+                <a href="#" class="lienCard">
+                    <div class="divImg">
+                        <img class="imgCard" src="./img/presse1.jpg" alt="">
+                    </div>
+                    <div class="divInfos">
+                        <div class="divHrCard">
+                            <hr class="hrCard">
+                        </div>
+                        <div class="infos">
+                            <span class="titreCard">Siège Opadoma</span><br>
+                            <span class="catégorieCard">Bureaux</span><br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="lienCard">
+                    <div class="divImg">
+                        <img class="imgCard" src="./img/presse2.jpg" alt="">
+                    </div>
+                    <div class="divInfos">
+                        <div class="divHrCard">
+                            <hr class="hrCard">
+                        </div>
+                        <div class="infos">
+                            <span class="titreCard">Siège Opadoma</span><br>
+                            <span class="catégorieCard">Bureaux</span><br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="lienCard">
+                    <div class="divImg">
+                        <img class="imgCard" src="./img/presse3.jpg" alt="">
+                    </div>
+                    <div class="divInfos">
+                        <div class="divHrCard">
+                            <hr class="hrCard">
+                        </div>
+                        <div class="infos">
+                            <span class="titreCard">Siège Opadoma</span><br>
+                            <span class="catégorieCard">Bureaux</span><br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!------------------------------------------Footer---------------------------------------->
+
+    <footer>
+        <h3>Footer</h3>
+        <p>Copyrights Dev_IV All rights reserved.</p>
+    </footer>
 
 </body>
 

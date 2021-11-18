@@ -14,7 +14,8 @@ body {
 }
 
 *{
-    font-family: sans-serif;
+    font-family: 'Michroma', sans-serif;
+    font-size: 10px;
 }
 
 /*------------------------HEADER------------------------ */
@@ -43,7 +44,7 @@ nav ul li {
     position: relative;
     display: inline-block;
     list-style: none;
-    padding: 23px;
+    padding: 27px;
 }
 
 /* .lienNav {
@@ -70,7 +71,7 @@ nav ul li {
 } */
 
 .lienNav {
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
     position: relative;
     color: var(--col3);
@@ -79,7 +80,7 @@ nav ul li {
 .lienNav::after {
     content: "";
     position: absolute;
-    height: 1.5px;
+    height: 1px;
     background-color: var(--col3);
     opacity: 0;
     left: 50%;
@@ -162,21 +163,24 @@ nav ul li {
     position: fixed;
     text-decoration: none;
     color: var(--col3);
-    font-size: 20px;
-    padding: 5px;
+}
+.premLettre {
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .logo {
     width: 150px;
-    height: 50px;
-    margin: 20px;
-    background-image: url(img/Mon\ logo\ A&M-noir-rectangulaire-sans-txt.jpg);
+    height: 75px;
+    margin: 10px;
+    background-image: url(img/logo-noir.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    transition: linear 0.3s;
+    transition: linear .3s;
 }
 .logo:hover {
-    background-image: url(img/Mon\ logo\ A&M-blanc-rectangulaire-sans-txt.jpg);
+    background-image: url(img/logo-blanc.jpg);
 }
 
 .text {
@@ -205,10 +209,13 @@ nav ul li {
     background-color: var(--col5);
     color: var(--col2);
     border: none;
-    font-size: 25px;
     padding: 20px;
     transition: ease-in-out .2s;
 }
+.btnRecherche i {
+    font-size: 25px;
+}
+
 .btnRecherche:hover {
     color: var(--col3);
     cursor: pointer;
@@ -292,7 +299,6 @@ nav ul li {
     background: var(--col4);
     color: var(--col2);
     border-bottom: 2px solid var(--col2);
-    font-family: sans-serif;
     outline: none;
 }
 .formRechercheOn .divInputRecherche label {
@@ -300,8 +306,7 @@ nav ul li {
     bottom: 10px;
     left: 0px;
     color: var(--col2);
-    font-size: 25px;
-    font-family: sans-serif;
+    font-size: 20px;
     pointer-events: none;
     transition: all 0.5s ease;
 }
@@ -309,7 +314,7 @@ nav ul li {
 .divInputRecherche input:valid ~ label {
     transform: translateY(-30px);
     color: var(--col7);
-    font-size: 15px;
+    font-size: 12px;
 }
 .formRechercheOn .divInputRecherche .underline {
     position: absolute;
@@ -410,7 +415,7 @@ nav ul li {
     border-bottom: 1px solid var(--col2);
     text-decoration: none;
     color: var(--col3);
-    font-size: 50px;
+    font-size: 30px;
 }
 .navPhone :nth-child(4) {
     display: flex;
@@ -421,7 +426,7 @@ nav ul li {
     border-bottom: 1px solid var(--col2);
     text-decoration: none;
     color: var(--col3);
-    font-size: 50px;
+    font-size: 30px;
 }
 
 /*Fin Gestion du voile*/
@@ -462,12 +467,15 @@ nav ul li {
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1010px) {
     .LogoTitre p {
         display: none;
     }
     .logo {
-        background-image: url(img/Mon\ logo\ A&M\ noir\ rectangulaire.jpg);
+        background-image: url(img/logo-noir-text.jpg);
+    }
+    .logo:hover {
+        background-image: url(img/logo-blanc-text.jpg);
     }
     nav ul {
         margin-right: 10px;

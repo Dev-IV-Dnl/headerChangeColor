@@ -1,15 +1,26 @@
 //Header qui change de couleur au scrollY :
 let nav = document.querySelector("#nav");
 let iconeMenuBurger = document.querySelector("#iconeMenuBurger");
+let logo = document.querySelector(".logo");
 let departScroll = window.pageYOffset;
 
 window.onscroll = function () {
     let top = window.scrollY;
     if (top >= 5) {
         nav.classList.add("bgBlack");
+        if(window.matchMedia("(max-width:1010px)").matches) { // si on atteind moins de 1010px on met le logo avec text en le changeant de couleur
+            logo.style.backgroundImage = "url(img/logo-blanc-text.jpg)";
+        } else {
+            logo.style.backgroundImage = "url(img/logo-blanc.jpg)"; // ici pas de text car largeur suffisante pour afficher le titre du cabinet
+        }
         iconeMenuBurger.style.border = "1px solid var(--col5)";
     } else if (top <= 5) {
         nav.classList.remove("bgBlack");
+        if(window.matchMedia("(max-width:1010px)").matches) {
+            logo.style.backgroundImage = "url(img/logo-noir-text.jpg)"; // inverse pour revenir au logo noir d'origine lorsqu'en haut de la page
+        } else {
+            logo.style.backgroundImage = "url(img/logo-noir.jpg)"; 
+        }
         iconeMenuBurger.style.border = "1px solid var(--col3)";
     }
 }

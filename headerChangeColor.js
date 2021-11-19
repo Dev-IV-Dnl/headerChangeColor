@@ -33,8 +33,8 @@ window.onscroll = function () {
 let btnRecherche = document.getElementById("btnRecherche");
 let voileRecherche = document.getElementById("voileRecherche");
 let navVoileRecherche = document.querySelector(".navVoileRecherche");
-let croixVoileRecherche = document.getElementById("croixVoileRecherche");
 let iconeMenuBurgerRecherche = document.getElementById("iconeMenuBurgerRecherche");
+let croixVoileRecherche = document.getElementById("croixVoileRecherche");
 
 //Variables Formulaire :
 let formRecherche = document.querySelector("#formRecherche");
@@ -75,6 +75,9 @@ croixVoileRecherche.addEventListener("click", (e) => {
 
 let navVoileBurger = document.getElementById("navVoileBurger");
 let croixVoileBurger = document.getElementById("croixVoileBurger");
+let ligne1 = document.querySelector("ligne1Burger");
+let ligne2 = document.querySelector("ligne2Burger");
+let ligne3 = document.querySelector("ligne3Burger");
 let btnVoileBurgerRecherche = document.getElementById("btnVoileBurgerRecherche");
 let navPhone = document.getElementById("navPhone");
 

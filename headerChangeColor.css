@@ -302,7 +302,7 @@ body {
     transform-origin: left;
     border-radius: 50px;
     transform-origin: left;
-    transform: translate(7px, 0px);
+    transform: translate(5px, 0px);
     transform: rotate(-45deg);
 }
 
@@ -416,7 +416,7 @@ body {
     z-index: -5;
 }
 
-#croixVoileBurger .ligne1CroixVoileRecherche {
+#croixVoileBurger .ligne1Burger {
     position: absolute;
     top: 9px;
     width: 80%;
@@ -425,11 +425,15 @@ body {
     transform-origin: left;
     border-radius: 50px;
     transform-origin: left;
-    transform: translate(7px, 0px);
+    transform: translate(1.5px, 0px);
     transform: rotate(45deg);
 }
 
-#croixVoileBurger .ligne2CroixVoileRecherche {
+#croixVoileBurger .ligne2Burger {
+    display: none;
+}
+
+#croixVoileBurger .ligne3Burger {
     position: absolute;
     bottom: 6px;
     width: 80%;
@@ -438,7 +442,7 @@ body {
     transform-origin: left;
     border-radius: 50px;
     transform-origin: left;
-    transform: translate(7px, 0px);
+    transform: translate(1.5px, 0px);
     transform: rotate(-45deg);
 }
 
@@ -527,10 +531,6 @@ body {
     }
 
     .logo {
-        background-image: url(img/logo-noir-text2.jpg);
-    }
-
-    .logo:hover {
         background-image: url(img/logo-blanc-text2.jpg);
     }
 

@@ -24,7 +24,7 @@ window.onscroll = function () {
         } else {
             logo.style.backgroundImage = "url(img/logo-noir.jpg)";
         }
-        iconeMenuBurger.style.border = "1px solid var(--col3)";
+        iconeMenuBurger.style.border = "1px solid var(--col4)";
     }
 }
 

@@ -8,6 +8,7 @@ let voileBurger = document.getElementById("voileBurger");
 
 window.onscroll = function () {
     let top = window.scrollY;
+    console.log(top);
     if (top >= 5) {
         navigation.classList.add("bgBlack");
         if(window.matchMedia("(max-width:1010px)").matches) { // si on atteind moins de 1010px on met le logo avec text en le changeant de couleur

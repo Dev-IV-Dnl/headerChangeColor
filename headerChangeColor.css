@@ -73,7 +73,7 @@ body {
 } */
 
 .lienNav {
-    font-size: 15px;
+    font-size: 17px;
     text-decoration: none;
     position: relative;
     color: var(--col3);
@@ -181,6 +181,9 @@ body {
     position: fixed;
     text-decoration: none;
     color: var(--col3);
+}
+.logoTitre>p {
+    margin-top: 0px;
 }
 
 .premLettre {
@@ -561,13 +564,11 @@ body {
 
     .LogoTitre {
         position: relative;
-        width: 100px;
-        height: 50px;
     }
 
     .logo {
-        width: 100%;
-        height: 100%;
+        width: 112.5px;
+        height: 56.25px;
         margin: 0;
     }
 }

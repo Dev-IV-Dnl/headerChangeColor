@@ -12,7 +12,7 @@ window.onscroll = function () {
     if (top >= 5) {
         navigation.classList.add("bgBlack");
         if(window.matchMedia("(max-width:1010px)").matches) { // si on atteind moins de 1010px on met le logo avec text en le changeant de couleur
-            logo.style.backgroundImage = "url(img/logo-blanc-text.jpg)";
+            logo.style.backgroundImage = "url(img/logo-blanc-text2.jpg)";
         } else {
             logo.style.backgroundImage = "url(img/logo-blanc.jpg)"; // ici pas de text car largeur suffisante pour afficher le titre du cabinet
         }
@@ -20,7 +20,7 @@ window.onscroll = function () {
     } else if (top <= 5) {
         navigation.classList.remove("bgBlack");
         if(window.matchMedia("(max-width:1010px)").matches) {
-            logo.style.backgroundImage = "url(img/logo-noir-text.jpg)"; // inverse pour revenir au logo noir d'origine lorsqu'en haut de la page
+            logo.style.backgroundImage = "url(img/logo-noir-text2.jpg)"; // inverse pour revenir au logo noir d'origine lorsqu'en haut de la page
         } else {
             logo.style.backgroundImage = "url(img/logo-noir.jpg)";
         }

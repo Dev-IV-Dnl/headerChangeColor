@@ -4,7 +4,7 @@
     --col3: white;
     --col4: black;
     --col5: transparent;
-    --col7: #00a2ff;
+    --col7: #ff0000;
 }
 
 body {
@@ -527,11 +527,11 @@ body {
     }
 
     .logo {
-        background-image: url(img/logo-noir-text.jpg);
+        background-image: url(img/logo-noir-text2.jpg);
     }
 
     .logo:hover {
-        background-image: url(img/logo-blanc-text.jpg);
+        background-image: url(img/logo-blanc-text2.jpg);
     }
 
     .navigation ul {

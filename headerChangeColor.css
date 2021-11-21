@@ -986,7 +986,7 @@ footer {
     content: "";
     display: block;
     width: 0px;
-    height: 2px;
+    height: 1px;
     background: var(--col4);
     transition: width .2s ease-in-out;
     border-radius: 50px;

@@ -83,7 +83,7 @@ body {
 }
 
 .lienNav:hover {
-    color: var(--col3);
+    color: var(--col7);
     text-shadow: 1px 1px 5px var(--col4);
 }
 
@@ -92,7 +92,7 @@ body {
     content: "";
     position: absolute;
     height: 1.5px;
-    background-color: var(--col7);
+    background-color: var(--col3);
     opacity: 0;
     left: 50%;
     transform: translate(-50%, 10px);

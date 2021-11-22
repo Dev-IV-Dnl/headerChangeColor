@@ -410,7 +410,7 @@ body {
 .divInputRecherche input:valid~label {
     transform: translateY(-30px);
     color: var(--col7);
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .formRechercheOn .divInputRecherche .underline {

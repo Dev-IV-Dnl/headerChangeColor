@@ -2,7 +2,6 @@
 let navigation = document.querySelector("#navigation");
 let iconeMenuBurger = document.querySelector("#iconeMenuBurger");
 let logo = document.querySelector(".logo");
-let lienNav = document.querySelector(".lienNav");
 let departScroll = window.pageYOffset;
 let voileBurger = document.getElementById("voileBurger");
 
@@ -35,6 +34,7 @@ let voileRecherche = document.getElementById("voileRecherche");
 let navVoileRecherche = document.querySelector(".navVoileRecherche");
 let iconeMenuBurgerRecherche = document.getElementById("iconeMenuBurgerRecherche");
 let croixVoileRecherche = document.getElementById("croixVoileRecherche");
+let mesNav = document.querySelector('.mesNav');
 
 //Variables Formulaire :
 let formRecherche = document.querySelector("#formRecherche");
@@ -44,6 +44,8 @@ let labelRecherche = document.querySelector("#labelRecherche");
 
 //Gestion de l'évènement click sur la recherche :
 btnRecherche.addEventListener("click", (e) => {
+    mesNav.classList.remove("lienNav");
+    mesNav.classList.add("lienNav2");
     iconeMenuBurgerRecherche.style.opacity = "0";
     iconeMenuBurgerRecherche.style.cursor = "none";
     navVoileRecherche.style.opacity = "1";
@@ -56,6 +58,7 @@ btnRecherche.addEventListener("click", (e) => {
     inputRecherche.classList.add("inputRechercheOn");
     labelRecherche.classList.remove("labelRechercheOff");
     labelRecherche.classList.add("labelRechercheOn");
+    
 })
 //Gestion de la fermeture de la recherche :
 croixVoileRecherche.addEventListener("click", (e) => {

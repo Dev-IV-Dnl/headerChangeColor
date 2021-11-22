@@ -9,6 +9,7 @@
 
 body {
     position: relative;
+    background-color: var(--col1);
     margin: 0;
     padding: 0;
 }
@@ -91,7 +92,6 @@ body {
     content: "";
     position: absolute;
     height: 1.5px;
-    box-shadow: 0 1px 1px var(--col4);
     background-color: var(--col3);
     opacity: 0;
     left: 50%;
@@ -113,6 +113,7 @@ body {
 .lienNav:hover::after {
     opacity: 1;
     transform: translate(-50%, 2px);
+    box-shadow: 0 2px 2px var(--col4);
 }
 
 .lienNav::before,
@@ -121,6 +122,56 @@ body {
 }
 
 .lienNav:hover::before {
+    transition-delay: 0s;
+}
+
+.lienNav2 {
+    font-size: 17px;
+    text-decoration: none;
+    position: relative;
+    color: var(--col3);
+    text-shadow: 1px 1px 2px var(--col4);
+    transition: ease-in-out .2s;
+}
+.lienNav2:hover {
+    color: var(--col3);
+    text-shadow: 1px 1px 5px var(--col4);
+}
+
+.lienNav2::before,
+.lienNav2::after {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    background-color: var(--col3);
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    transition: all .2s ease-in-out;
+}
+
+.lienNav2::before {
+    width: 100%;
+    bottom: 0;
+}
+
+.lienNav2::after {
+    width: 60%;
+    bottom: -5px;
+}
+
+.lienNav2:hover::before,
+.lienNav2:hover::after {
+    opacity: 1;
+    transform: translate(-50%, 2px);
+}
+
+.lienNav2::before,
+.lienNav2:hover::after {
+    transition-delay: .1s;
+}
+
+.lienNav2:hover::before {
     transition-delay: 0s;
 }
 
@@ -218,9 +269,14 @@ body {
 .bgBlack {
     background-color: var(--col4);
 }
-
 .bgBlack:hover {
     box-shadow: 0px 0px 10px var(--col3);
+}
+.bgWhite {
+    background-color: var(--col3);
+}
+.bgWhite:hover {
+    box-shadow: 0px 0px 10px var(--col4);
 }
 
 .btnRecherche {
@@ -228,31 +284,24 @@ body {
     width: 40px;
     height: 40px;
     background-color: var(--col5);
-    color: var(--col2);
+    color: var(--col3);
     border: none;
     padding: 20px;
     transition: ease-in-out .2s;
     border-radius: 10px;
 }
-
+.btnRecherche:hover {
+    color: var(--col3);
+    cursor: pointer;
+    transform: scale(1.2);
+}
 #btnRecherche i {
     position: absolute;
     right: 10px;
     bottom: 5px;
     font-size: 25px;
-    text-shadow: 1px 1px 2px var(--col4);
+    text-shadow: 1px 1px 1px var(--col4);
     transition: ease-in-out .2s;
-}
-
-#btnRecherche i:hover {
-
-    text-shadow: 1px 1px 5px var(--col4);
-}
-
-#btnRecherche:hover {
-    color: var(--col3);
-    cursor: pointer;
-    transform: scale(1.2);
 }
 
 /*Gestion du voileRecherche*/
@@ -760,7 +809,7 @@ body {
         height: 350px;
     }
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1235px) {
     .card {
         width: 280px;
         height: 350px;
